@@ -1,0 +1,18 @@
+[DEFAULT]
+count = 0
+date = 2016-1-1
+lastfinishedwordnum = 0
+limitation = 500
+failedwordfilepath = your director path\semanticElement\configFile\lostword.txt
+
+[WGPARA]
+url = http://www.dictionaryapi.com/api/v1/references/
+dicname = for example, "collegiate"
+urlfiletype = xml
+servicekey = your service key
+prepath = your folder to put word files in
+exceptionfilepath = your director path\semanticElement\configFile\exceptions.txt
+
+[WPPARA]
+re = for example, "(\d+)\. (\w+)"
+wordlistfilepath = your director path\semanticElement\wordList\your word list on which you work
