@@ -1,3 +1,5 @@
+# get all parameters when the ConfigProvider init, and other work object can get parameters from ConfigProvier.
+# and most important, you can modify all parameters in only one file -- config.ini. it's easier and more robust
 import configparser
 import time
 import os

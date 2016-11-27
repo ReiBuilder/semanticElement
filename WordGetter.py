@@ -39,6 +39,7 @@ class WordGetter:
     def makeUrl(self,word):
         return self.url + self.dicName + self.url_sep + self.urlFileType + self.url_sep + word + "?key=" + self.serviceKey
 
+    # new usage of urllib in python 3. the urllib has been splited to two parts.
     def getWordByWebService(self, word):
         if word is not None:
             fullUrl = self.makeUrl(word)
@@ -46,7 +47,7 @@ class WordGetter:
             xml = None
             try:
                 xml = urllib.request.urlopen(fullUrl)
-            except Exception as e:
+            except Exception as e:# new usage of Exception
                 print(e)
                 self.exceptions.write(str(e))
                 self.myWordProvider.markException(word)
@@ -62,7 +63,7 @@ class WordGetter:
                   "or The current work list is finished!!")
             self.myWordProvider.setStateSleeping()
 
-
+    # i don't know if virtual environment will close the file handle later, so i do it.
     def __del__(self):
         if self.exceptions != None :
             self.exceptions.close()
